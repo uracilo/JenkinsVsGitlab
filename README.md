@@ -19,6 +19,13 @@ Install Jenkins
  
  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ``` 
+``` 
+sudo vi /var/lib/jenkins/config.xml
+<useSecurity>true <useSecurity>
+<useSecurity>false<useSecurity>
+sudo systemctl restart jenkins
+
+``` 
  
  
  Install gitlab
