@@ -110,12 +110,27 @@ _______________________________________________________
 
 ![image](https://user-images.githubusercontent.com/19912111/124534704-6ad6c080-ddda-11eb-89bf-36f648233948.png)
 
-![image](https://user-images.githubusercontent.com/19912111/124534835-ad000200-ddda-11eb-9781-790b753109d3.png)
+![PIPELINE](https://user-images.githubusercontent.com/19912111/124538055-9fe61180-dde0-11eb-9952-342f5919182f.png)
 
 
 
 
 
+
+### Important note 
+- User privilege specification
+
+``` 
+sudo su - root
+sudo vi /etc/sudoers
+jenkins ALL=(ALL:ALL) ALL
+sudo systemctl restart jenkins 
+sudo passwd jenkins
+
+
+sudo su - jenkins
+sudo setfacl -m user:$USER:rw /var/run/docker.sock
+``` 
 
 
 
