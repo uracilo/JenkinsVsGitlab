@@ -122,11 +122,7 @@ _______________________________________________________
 
 ``` 
 sudo su - root
-sudo vi /etc/sudoers
-jenkins ALL=(ALL:ALL) ALL
-sudo systemctl restart jenkins 
 sudo passwd jenkins
-
 
 sudo su - jenkins
 sudo setfacl -m user:$USER:rw /var/run/docker.sock
