@@ -125,6 +125,10 @@ sudo su - root
 sudo passwd jenkins
 
 sudo su - jenkins
+
+sudo vi /etc/sudoers
+jenkins ALL=(ALL:ALL) ALL
+
 sudo setfacl -m user:$USER:rw /var/run/docker.sock
 ``` 
 
